@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="€0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAs-hl-d2u">
+                                <rect key="frame" x="199" y="88" width="160" height="60"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ME-jJ-swm">
+                                <rect key="frame" x="314" y="181" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip(15%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otY-IB-eau">
+                                <rect key="frame" x="199" y="181" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdx-b0-Xeu">
+                                <rect key="frame" x="314" y="227" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWH-q2-Tyk">
+                                <rect key="frame" x="199" y="227" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="YgP-Rd-8U1">
+                                <rect key="frame" x="14" y="318" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HkU-Ny-tcU"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="otY-IB-eau" firstAttribute="top" secondItem="yAs-hl-d2u" secondAttribute="bottom" constant="33" id="3Mv-B4-RHE"/>
+                            <constraint firstItem="9ME-jJ-swm" firstAttribute="top" secondItem="yAs-hl-d2u" secondAttribute="bottom" constant="33" id="6xz-Lc-FoG"/>
+                            <constraint firstItem="kWH-q2-Tyk" firstAttribute="leading" secondItem="otY-IB-eau" secondAttribute="leading" id="MNi-Pk-mdL"/>
+                            <constraint firstItem="kWH-q2-Tyk" firstAttribute="top" secondItem="otY-IB-eau" secondAttribute="bottom" constant="25" id="P42-us-0L0"/>
+                            <constraint firstItem="cdx-b0-Xeu" firstAttribute="trailing" secondItem="9ME-jJ-swm" secondAttribute="trailing" id="Q3S-YF-l6n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yAs-hl-d2u" secondAttribute="trailing" id="Rkx-Bd-cEI"/>
+                            <constraint firstItem="yAs-hl-d2u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="183" id="XmY-ya-Hkh"/>
+                            <constraint firstItem="yAs-hl-d2u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="ZHJ-yx-6xz"/>
+                            <constraint firstItem="9ME-jJ-swm" firstAttribute="trailing" secondItem="yAs-hl-d2u" secondAttribute="trailing" id="c8R-vc-tAD"/>
+                            <constraint firstItem="cdx-b0-Xeu" firstAttribute="top" secondItem="9ME-jJ-swm" secondAttribute="bottom" constant="25" id="zCi-iD-mmv"/>
+                            <constraint firstItem="otY-IB-eau" firstAttribute="leading" secondItem="yAs-hl-d2u" secondAttribute="leading" id="zFt-UF-8w0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="percentOfSumLabel" destination="9ME-jJ-swm" id="wo5-Vk-u1U"/>
+                        <outlet property="percentageSlider" destination="YgP-Rd-8U1" id="KgY-79-QGC"/>
+                        <outlet property="sumTextField" destination="yAs-hl-d2u" id="KHD-7G-9Kq"/>
+                        <outlet property="tipPercentageLabel" destination="otY-IB-eau" id="7nX-Cm-XrO"/>
+                        <outlet property="totalLabel" destination="cdx-b0-Xeu" id="1E8-x4-3tB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
